@@ -23,6 +23,8 @@ namespace EjercicioClase
         public Equipo()
         {
             jugadores = new List<Jugador>();
+            CiudadOrigen = "No existe dato";
+            Entrenador = "Emiliano";
         }
     }
 }
