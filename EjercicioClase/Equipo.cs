@@ -12,6 +12,7 @@ namespace EjercicioClase
         public string CiudadOrigen { get; set; }
         public string Entrenador { get; set; }
         public string Jugadores { get; set; }
+        public Estadio EstadioJugadores { get; set; }
 
         public List<Jugador> jugadores { get; set; }
 

@@ -12,6 +12,8 @@ namespace EjercicioClase
         {
             List<Equipo> equipos = new List<Equipo>();
             Equipo equipo1 = new Equipo();
+            equipo1.EstadioJugadores = new Estadio();
+            equipo1.EstadioJugadores.Nombre = "Estadio de Hermosillo";
             equipo1.Nombre = "Las Aguilas";
             equipo1.jugadores.Add(new Jugador("Javier", "53"));
             equipo1.jugadores.Add(new Jugador("Francisco", "12"));
@@ -40,13 +42,22 @@ namespace EjercicioClase
             foreach (Equipo elemento in equipos)
             {
                 Console.WriteLine("Nombre Equipo: " + elemento.Nombre);
-                foreach(Jugador elemento2 in elemento.jugadores)
+                if (elemento.EstadioJugadores != null)
+                {
+                    Console.WriteLine("Nombre Estadio: " + elemento.EstadioJugadores.Nombre);
+                }
+                else
+                {
+                    Console.WriteLine("El equipo no tiene estadio");
+                }
+                foreach (Jugador elemento2 in elemento.jugadores)
                 {
                     Console.WriteLine("Nombre: " + elemento2.Nombre);
                     Console.WriteLine("Numero Jugador: " + elemento2.Numero);
                 }
                 Console.WriteLine(" ");
             }
+            
             Console.ReadLine();
         }
     }
